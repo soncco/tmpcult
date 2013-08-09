@@ -1,0 +1,55 @@
+doctype 5
+html
+  head
+    title Culture
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block css
+  body
+    div#fb-root
+    script
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    header
+      .navbar.transparent.navbar-inverse.navbar-fixed-top
+        .navbar-inner
+          .container
+            a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+              - for (var i = 0; i <= 2; i++)
+                span.icon-bar
+
+            a.brand(href='#') Inca Culture
+
+            .nav-collapse.collapse
+              ul.nav.pull-right
+                li.active
+                  a(href='#') Inicio
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown') Nuestros Tours
+                    b.caret
+                  ul.dropdown-menu
+                    li
+                      a(href='#') Tipo 1
+                    li
+                      a(href='#') Tipo 2
+                    li
+                      a(href='#') Tipo 3
+                li
+                  a(href='#') Ofertas
+                li
+                  a(href='#') La empresa
+                li
+                  a(href='#') Contacto
+
+    block content
+    
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+    script(src='js/bootstrap/js/bootstrap.min.js')
+    script(src='js/owl-carousel/owl.carousel.min.js')
+    script(src='js/culture.js')
+    block js

@@ -1,0 +1,103 @@
+extends layout
+
+block content
+  section.slider
+    .item
+      img(src='http://farm3.staticflickr.com/2633/4036755746_c35ff1e750_o.jpg', alt='Hola ke ase')
+      .desc MachuPicchu
+    .item
+      img(src='http://farm3.staticflickr.com/2633/4036755746_c35ff1e750_o.jpg', alt='Hola ke ase')
+      .desc Las mejores ofertas
+    .item
+      img(src='http://farm3.staticflickr.com/2633/4036755746_c35ff1e750_o.jpg', alt='Hola ke ase')
+      .desc El mejor lugar
+
+  section.home-tours
+    .container
+      h2.title Ofertas del mes
+      .row-fluid
+        - for(var t = 0; t <= 3; t++)
+          .span3
+            .tour
+              .tour-image.text-center
+                  a(href='#')
+                    img(src='http://placehold.it/200x150/2c3e50')
+              .tour-body
+                h3.title
+                  a(href='#') Cusco y Machu Picchu 3 días y 2 noches
+
+                .text
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque autem doloremque distinctio sit tempora quae deleniti iste iure fugit reiciendis.
+
+                .actions.text-center
+                  a.btn.btn-primary.btn-block(href='#') Reservar
+        
+
+  section.main-content.front
+    .container
+      .row-fluid
+        .span8
+          .content
+            h2.title Nuestros Tours
+            .row-fluid
+              .span6
+                - for(var type = 0; type <= 2; type++)
+                  h3.type-title Tours en Cusco
+                  ul
+                    - for(var li = 0; li <= 5; li ++)
+                      li
+                        a(href='#') Cusco y Machu Picchu 3 días y 2 noches
+
+              .span6
+                - for(var type = 0; type <= 2; type++)
+                  h3.type-title Tours en Cusco
+                  ul
+                    - for(var li = 0; li <= 5; li ++)
+                      li
+                        a(href='#') Cusco y Machu Picchu 3 días y 2 noches
+
+        .span4
+          aside.sidebar
+            h4.sidebar-title Buscar
+
+            .sidebar-body
+
+              .input-append
+                input.span12(type='text')
+                button.btn(type='button') Buscar
+
+            h4.sidebar-title Compartir
+
+            .sidebar-body
+              <div class="fb-like-box" data-href="https://www.facebook.com/pages/Andes-Discovery-Tours/409823362365555?ref=hl" data-width="100%" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+              ul.inline
+                li
+                  i.icon-facebook.icon-large
+                li
+                  i.icon-twitter.icon-large
+                li
+                  i.icon-youtube.icon-large
+                li
+                  i.icon-skype.icon-large
+
+
+  footer.footer
+    .container
+      .row-fluid
+        - for(var f = 0; f <= 2; f++)
+          .span4
+            .footer-first
+              h4 Contactenos
+              address
+                | Urbanización Ttio 435
+                br
+                | Teléfonos 555-555-555
+                br
+                | contact@inca-culture.com
+
+
+
+
+block css
+  link(rel='stylesheet', href='js/owl-carousel/owl.carousel.css')
+  link(rel='stylesheet', href='js/owl-carousel/owl.theme.css')
